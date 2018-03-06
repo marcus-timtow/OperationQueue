@@ -100,7 +100,7 @@
         if (this.debug) {
             logname = options.name || operation.name || "anonymous operation";
             logoptions = logoptions ? JSON.stringify(options) : "";
-            this.log(this + " queued("+ _priority +") " + logoptions + ": " + logname);
+            this.log(this + " queued("+ _priority  + "/" + this.operations.length +") " + logoptions + ": " + logname);
         }
 
         let that = this;
@@ -189,4 +189,3 @@
 
     return OperationQueue;
 }));
-
